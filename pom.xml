@@ -9,7 +9,7 @@
 
 <properties>
          <docker.image.prefix>kammana</docker.image.prefix>
-         <sonar.host.url>http://http://43.205.96.47:9000/</sonar.host.url>
+         <sonar.host.url>http://43.205.145.182:9000//</sonar.host.url>
 </properties>
     <name>AnilKumar</name>
     
