@@ -8,15 +8,15 @@ pipeline {
     stages {
         stage('GitCodeCheckOut') {
             steps {
-                git branch: 'main', url: 'https://github.com/mannem302/AnilKumar.git'
+                git branch: 'main', url: 'https://github.com/Sakaleelasatish/AnilKumar.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean deploy'
             }
         }
-        stage('ImageBuild') {
+       /* stage('ImageBuild') {
             steps {
                 sh 'docker build -t mannem302/tomcat:$BUILD_ID .'
             }
@@ -38,7 +38,7 @@ pipeline {
                 
                 sh 'docker run -itd --name mywebapp$BUILD_ID  -p 8082:8080 mannem302/tomcat:$BUILD_ID'
             }
-        }
+        }*/
         
     }
 }
